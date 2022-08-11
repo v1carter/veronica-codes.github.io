@@ -1,8 +1,11 @@
-import confetti from "https://cdn.jsdelivr.net/npm/canvas-confetti@1.5.1/dist/confetti.browser.min.js"
+const fun = document.querySelectorAll(".transparent");
 
-
-const fun = document.querySelector(".transparent");
-
-fun.addEventListener("click", () => {
-  confetti();
+fun.forEach(button => {
+  button.addEventListener("click", () => {
+  confetti({
+    particleCount: 200,
+    spread: 100,
+    origin: { y: 0.6 }
+  });
+})
 });

@@ -91,6 +91,8 @@ nav>li {
 .transparent{
     -webkit-text-fill-color: transparent;
     -webkit-text-stroke-width: 0.2px;
+    user-select: none;
+    cursor: pointer;
 }
 
 .about h1 {
