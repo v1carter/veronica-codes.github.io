@@ -1,174 +1,138 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Veronica Carter</title>
-    <link rel="stylesheet" href="styles.css">
-    <script src="page.js" defer></script>
     <link rel="icon" type="image/x-icon" href="favicon.ico">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Work+Sans&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Work+Sans:wght@400;500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
     <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.5.1/dist/confetti.browser.min.js"></script>
-
+    <script src="page.js" defer></script>
 </head>
-
 <body>
-
     <header>
-        <h3>
-            <a href="https://github.com/v1carter" class="link">
-                <img src="hi.svg" alt="hi icon">
+        <div class="header-left">
+            <a href="#" onclick="location.reload(); return false;" class="logo" aria-label="Home">
+                <svg version="1.0" xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 512.000000 512.000000" preserveAspectRatio="xMidYMid meet" class="logo-svg">
+                    <g transform="translate(0.000000,512.000000) scale(0.100000,-0.100000)" stroke="none">
+                        <path d="M370 2975 l0 -2145 435 0 435 0 0 -410 c0 -307 3 -410 12 -410 6 0 354 184 773 410 l762 410 981 0 982 0 0 2145 0 2145 -2190 0 -2190 0 0 -2145z m4080 5 l0 -1840 -862 0 -861 0 -580 -312 c-319 -172 -584 -314 -589 -316 -4 -2 -9 137 -10 310 l-3 313 -437 3 -438 2 0 1840 0 1840 1890 0 1890 0 0 -1840z" />
+                        <path d="M3452 3243 l3 -578 148 -3 147 -3 0 581 0 580 -150 0 -150 0 2 -577z" />
+                        <path d="M1340 2985 l0 -725 150 0 150 0 0 300 0 300 245 0 245 0 2 -297 3 -298 148 -3 147 -3 0 726 0 725 -150 0 -150 0 0 -275 0 -275 -245 0 -245 0 0 275 0 275 -150 0 -150 0 0 -725z" />
+                        <path d="M2780 2985 l0 -726 148 3 147 3 3 723 2 722 -150 0 -150 0 0 -725z" />
+                        <path d="M3520 2438 c-108 -74 -109 -212 -1 -285 40 -27 117 -31 161 -8 78 40 111 145 71 222 -29 58 -73 86 -140 91 -46 3 -62 0 -91 -20z" />
+                    </g>
+                </svg>
             </a>
-        </h3>
-        <nav>
-            <li>
-                <a href="#skills">Skills</a>
-            </li>
-            <li>
-                <a href="#projects">Projects</a>
-            </li>
-            <li>
-                <a href="#contact">Contact</a>
-            </li>
+        </div>
+        <nav aria-label="Main navigation">
+            <ul>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#connect">Connect</a></li>
+            </ul>
         </nav>
+        <div class="header-controls">
+            <time class="time" aria-label="Current time">
+                <span id="current-time"></span>
+            </time>
+            <label class="switch" aria-label="Toggle dark mode">
+                <input type="checkbox" id="dark-mode-toggle">
+                <span class="slider"></span>
+            </label>
+        </div>
     </header>
-
-
-    <div class="about">
-        <h2 id="hi">👋 Hi, I'm Veronica</h2>
-        <h1>
-            I enjoy <span class="transparent">challenges</span> and <span class="transparent">puzzles</span>, so I've
-            started coding for <span class="transparent">fun</span>.
-            <br>
-            I've been learning front end development since June 2022. My goal is to merge code with
-            creativity to build sleek web pages.
-        </h1>
+    <main id="main-content">
+        <section class="about" aria-label="Introduction">
+            <h1>
+                Hi, I'm Veronica, a <span class="transparent">#developer</span> and web <span class="transparent">#designer</span> based in the UK.
+                I build accessible, pixel-perfect web experiences. My goal is to <span class="transparent">#engineer</span> creativity and technical expertise into sleek, user-friendly UI components.
+            </h1>
+        </section>
+        <section class="projects" id="projects" aria-label="Portfolio projects">
+            <h2 class="title">Projects</h2>
+            <div class="projects-grid">
+                <article class="project">
+                    <h3>Library</h3>
+                    <p class="project__description">Small interactive book reading log.</p>
+                    <ul class="tech">
+                        <li>HTML</li>
+                        <li>CSS</li>
+                        <li>JavaScript</li>
+                    </ul>
+                    <div class="links">
+                        <a href="https://github.com/v1carter/Library-app" title="View code on GitHub">
+                            <i class="fa fa-github" aria-hidden="true"></i>
+                        </a>
+                        <a href="https://v1carter.github.io/Library-app/" title="View live preview">
+                            <i class="fa fa-external-link" aria-hidden="true"></i>
+                        </a>
+                    </div>
+                </article>
+                <article class="project">
+                    <h3>Etch a Sketch</h3>
+                    <p class="project__description">Remake of Etch a Sketch using CSS grid.</p>
+                    <ul class="tech">
+                        <li>HTML</li>
+                        <li>CSS</li>
+                        <li>JavaScript</li>
+                    </ul>
+                    <div class="links">
+                        <a href="https://github.com/v1carter/Etch-pad" title="View code on GitHub">
+                            <i class="fa fa-github" aria-hidden="true"></i>
+                        </a>
+                        <a href="https://v1carter.github.io/Etch-pad/" title="View live preview">
+                            <i class="fa fa-external-link" aria-hidden="true"></i>
+                        </a>
+                    </div>
+                </article>
+                <article class="project">
+                    <h3>Sign Up Page</h3>
+                    <p class="project__description">Sign up page which checks input.</p>
+                    <ul class="tech">
+                        <li>HTML</li>
+                        <li>CSS</li>
+                        <li>JavaScript</li>
+                    </ul>
+                    <div class="links">
+                        <a href="https://github.com/v1carter/sign-up-page/" title="View code on GitHub">
+                            <i class="fa fa-github" aria-hidden="true"></i>
+                        </a>
+                        <a href="https://v1carter.github.io/sign-up-page/" title="View live preview">
+                            <i class="fa fa-external-link" aria-hidden="true"></i>
+                        </a>
+                    </div>
+                </article>
+                <article class="project">
+                    <h3>Naughts and Crosses</h3>
+                    <p class="project__description">Play the classic game with emojis!</p>
+                    <ul class="tech">
+                        <li>HTML</li>
+                        <li>CSS</li>
+                        <li>JavaScript</li>
+                    </ul>
+                    <div class="links">
+                        <a href="https://github.com/v1carter/Naughts-and-Crosses/" title="View code on GitHub">
+                            <i class="fa fa-github" aria-hidden="true"></i>
+                        </a>
+                        <a href="https://v1carter.github.io/Naughts-and-Crosses/" title="View live preview">
+                            <i class="fa fa-external-link" aria-hidden="true"></i>
+                        </a>
+                    </div>
+                </article>
+            </div>
+        </section>
+    </main>
+    <h2 id="connect">Thanks for scrolling through</h2>
+    <div id="boids-container" aria-hidden="true">
+        <svg id="boids-svg" preserveAspectRatio="xMidYMid meet"></svg>
     </div>
-
-    <!-- Skills -->
-    <section class="skills" id="skills">
-        <h2 class="title">Skills.</h2>
-        <ul>
-            <li>Html</li>
-            <li>CSS</li>
-            <li>JavaScript</li>
-        </ul>
-    </section>
-
-    <section class="projects">
-        <h2 class="title" id="projects">Projects.</h2>
-        <div class="projects-grid">
-            <div class="project">
-                <h3>Library</h3>
-                <p class="project__description">
-                    Small interactive book reading log.
-                </p>
-                <ul class="tech">
-                    <li>Html</li>
-                    <li>Css</li>
-                    <li>JavaScript</li>
-                </ul>
-
-                <div class="links">
-                    <a href="https://github.com/v1carter/Library-app" title="View code on Github">
-                        <i id="icon" class="fa fa-github -xl"></i>
-                    </a>
-                    <a href="https://v1carter.github.io/Library-app/" title="View live preview">
-                        <i id="icon" class="fa fa-external-link"></i>
-                    </a>
-                </div>
-            </div>
-
-            <div class="project">
-                <h3>Etch a sketch</h3>
-                <p class="project__description">
-                    Remake of etch a sketch using Css grid.
-                </p>
-                <ul class="tech">
-                    <li>Html</li>
-                    <li>Css</li>
-                    <li>JavaScript</li>
-                </ul>
-
-                <div class="links">
-                    <a href="https://github.com/v1carter/Etch-pad" title="View code on Github">
-                        <i id="icon" class="fa fa-github"></i>
-                    </a>
-                    <a href="https://v1carter.github.io/Etch-pad/" title="View live preview">
-                        <i id="icon" class="fa fa-external-link"></i>
-                    </a>
-                </div>
-            </div>
-
-            <div class="project">
-                <h3>Sign up page</h3>
-                <p class="project__description">
-                    Sign up page which checks input.
-                </p>
-                <ul class="tech">
-                    <li>Html</li>
-                    <li>Css</li>
-                    <li>JavaScript</li>
-                </ul>
-
-                <div class="links">
-                    <a href="https://github.com/v1carter/sign-up-page/"title="View code on Github">
-                        <i id="icon" class="fa fa-github"></i>
-                    </a>
-                    <a href="https://v1carter.github.io/sign-up-page/" title="View live preview">
-                        <i id="icon" class="fa fa-external-link"></i>
-                    </a>
-                </div>
-            </div>
-
-            <div class="project">
-                <h3>Naughts and Crosses</h3>
-                <p class="project__description">
-                    Play the classic game with emojis!
-                </p>
-                <ul class="tech">
-                    <li>Html</li>
-                    <li>Css</li>
-                    <li>JavaScript</li>
-                </ul>
-
-                <div class="links">
-                    <a href="https://github.com/v1carter/Naughts-and-Crosses/"title="View code on Github">
-                        <i id="icon" class="fa fa-github"></i>
-                    </a>
-                    <a href="https://v1carter.github.io/Naughts-and-Crosses/" title="View live preview">
-                        <i id="icon" class="fa fa-external-link"></i>
-                    </a>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Contact -->
-    <section class="contact">
-        <h2 class="title" id="contact">Contact.</h2>
-        <h1>Thanks for scrolling through</h1>
-        <div class = last-buttons>
-            <a class="email" href="mailto:?subject=Check CV for email &body=thank%0Dyou">
-                <span>Email me</span>
-            </a>
-            <a class="email" href="https://github.com/v1carter">
-                <span>Github</span>
-            </a>
-        </div>
-    </section>
-
-
-
-    <footer class="footer">
+    <div class="bikes-line"></div>
+    <footer>
+        <div class="copyright">© <span id="year"></span> · <> · by Veronica</div>
     </footer>
 </body>
-
 </html>
